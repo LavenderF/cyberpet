@@ -1,0 +1,125 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#user-panel button {
+    margin-left: 10px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+main {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+#pet-container {
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    position: relative;
+    background-color: #e9f5e9;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#pet {
+    width: 150px;
+    height: 150px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: all 0.3s ease;
+}
+
+.pet-idle {
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.controls {
+    margin: 1rem 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.controls button {
+    padding: 8px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.controls button:hover {
+    background-color: #45a049;
+}
+
+.stats {
+    background-color: #f0f0f0;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+}
+
+.stats div {
+    margin: 5px 0;
+}
+
+#shop-section {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.pet-options {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 1rem 0;
+}
+
+.pet-option {
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+.pet-option:hover {
+    background-color: #e0e0e0;
+}
+
+.pet-option img {
+    width: 80px;
+    height: 80px;
+}
+
+.hidden {
+    display: none;
+}
