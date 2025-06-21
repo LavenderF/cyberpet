@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Pet</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Virtual Pet</h1>
+        <div id="user-panel">
+            <button id="login-btn">Login</button>
+            <button id="register-btn">Register</button>
+            <span id="username-display"></span>
+        </div>
+    </header>
+
+    <main>
+        <section id="pet-section">
+            <div id="pet-container">
+                <div id="pet" class="pet-idle"></div>
+                <div class="pet-name" id="pet-name">Unnamed</div>
+            </div>
+            
+            <div class="controls">
+                <button onclick="feedPet()">Feed</button>
+                <button onclick="playWithPet()">Play</button>
+                <button onclick="cleanPet()">Clean</button>
+                <button onclick="adoptPet()">Adopt New</button>
+            </div>
+            
+            <div class="stats">
+                <div>Hunger: <span id="hunger">50</span></div>
+                <div>Happiness: <span id="happiness">50</span></div>
+                <div>Cleanliness: <span id="cleanliness">50</span></div>
+                <div>Level: <span id="level">1</span></div>
+            </div>
+        </section>
+        
+        <section id="shop-section" class="hidden">
+            <h2>Pet Shop</h2>
+            <div class="pet-options">
+                <div class="pet-option" onclick="selectPetType('dog')">
+                    <img src="images/dog-icon.png" alt="Dog">
+                    <p>Dog</p>
+                </div>
+                <div class="pet-option" onclick="selectPetType('cat')">
+                    <img src="images/cat-icon.png" alt="Cat">
+                    <p>Cat</p>
+                </div>
+                <div class="pet-option" onclick="selectPetType('dragon')">
+                    <img src="images/dragon-icon.png" alt="Dragon">
+                    <p>Dragon</p>
+                </div>
+            </div>
+            <input type="text" id="pet-name-input" placeholder="Name your pet">
+            <button onclick="confirmAdoption()">Adopt</button>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
